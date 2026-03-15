@@ -22,7 +22,7 @@ Use this document as the orchestration entrypoint for the desktop redesign. Its 
 ## Task
 
 - [x] **Run `OPENRECALL-DESKTOP-02.md`:** Completed the Architecture and Foundations document with a current-state audit, target multi-process architecture, service surface, settings model, persistence/migration plan, efficiency rules, and security/privacy baselines.
-- [ ] **Run `OPENRECALL-DESKTOP-03.md`:** Complete the Desktop Shell and Core UX Framework document after Phase 01 decisions are captured.
+- [x] **Run `OPENRECALL-DESKTOP-03.md`:** Completed the desktop shell and core UX framework with approved Electron shell boundaries, preload constraints, development and packaging workflow, navigation model, recorder controls, settings IA, tray and startup behavior, and local-only diagnostics policy.
 - [ ] **Run `OPENRECALL-DESKTOP-04.md`:** Complete the AI Provider Configuration and Processing Pipeline document after architecture and shell decisions are defined.
 - [ ] **Run `OPENRECALL-DESKTOP-05.md`:** Complete the Search, Timeline, and Retrieval Rework document after the architecture and provider assumptions are stable.
 - [ ] **Run `OPENRECALL-DESKTOP-06.md`:** Complete the Privacy Controls, Deletion, Export, and Hardening document after prior phase decisions are available.
@@ -63,7 +63,7 @@ This document is only complete when all task items above are checked and the del
 | Phase | Document | Goal | Status | Key Dependency |
 |------|----------|------|--------|----------------|
 | 01 | `OPENRECALL-DESKTOP-02.md` | Architecture and foundations | Complete | Current-state audit |
-| 02 | `OPENRECALL-DESKTOP-03.md` | Desktop shell and core UX | Not Started | Phase 01 decisions |
+| 02 | `OPENRECALL-DESKTOP-03.md` | Desktop shell and core UX | Complete | Phase 01 decisions |
 | 03 | `OPENRECALL-DESKTOP-04.md` | AI provider configuration and processing pipeline | Not Started | Phase 01 and 02 |
 | 04 | `OPENRECALL-DESKTOP-05.md` | Search, timeline, and retrieval rework | Not Started | Phase 01 and 03 |
 | 05 | `OPENRECALL-DESKTOP-06.md` | Privacy controls, deletion, export, and hardening | Not Started | All prior phases |
@@ -96,3 +96,4 @@ This document is only complete when all task items above are checked and the del
 Use this section to summarize major design decisions as they are approved and to keep the phase status table current.
 
 - 2026-03-15: Phase 01 was completed in `OPENRECALL-DESKTOP-02.md`. The approved foundation keeps capture, OCR, indexing, migration, and retrieval in a Python background service; replaces Flask-rendered UI with Electron main plus React/TypeScript renderer; adopts loopback HTTP plus typed Electron IPC boundaries; and standardizes on a versioned settings file, OS-backed secret storage, and a new SQLite-backed persistence model with legacy import from `recall.db`.
+- 2026-03-15: Phase 02 was completed in `OPENRECALL-DESKTOP-03.md`. The approved shell uses Electron main as the sole privileged process, a narrow typed preload bridge, and a React/TypeScript renderer organized around Search, Timeline, Recorder, AI Setup, Settings, and Privacy/Data Management. Recorder controls, tray defaults, launch-on-login behavior, first-run local-first onboarding, and local-only diagnostics are now specified for implementation.
