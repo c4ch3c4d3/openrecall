@@ -25,7 +25,7 @@ Use this document as the orchestration entrypoint for the desktop redesign. Its 
 - [x] **Run `OPENRECALL-DESKTOP-03.md`:** Completed the desktop shell and core UX framework with approved Electron shell boundaries, preload constraints, development and packaging workflow, navigation model, recorder controls, settings IA, tray and startup behavior, and local-only diagnostics policy.
 - [x] **Run `OPENRECALL-DESKTOP-04.md`:** Completed the AI Provider Configuration and Processing Pipeline document with provider mode definitions, optional AI setup flow, provider-specific validation, capability-scoped backend abstractions, degradation rules, and provider health reporting.
 - [x] **Run `OPENRECALL-DESKTOP-05.md`:** Completed the Search, Timeline, and Retrieval Rework document with the approved hybrid record model, FTS5 plus embeddings retrieval pipeline, filter and typo-tolerance rules, explainability contract, timeline drill-down flow, and long-running indexing and reindexing behavior.
-- [ ] **Run `OPENRECALL-DESKTOP-06.md`:** Complete the Privacy Controls, Deletion, Export, and Hardening document after prior phase decisions are available.
+- [x] **Run `OPENRECALL-DESKTOP-06.md`:** Completed the Privacy Controls, Deletion, Export, and Hardening document with the approved Privacy/Data Management IA, delete-all and time-range deletion semantics, operations-log export contract, migration and backfill rules, automated test gates, packaging and hardening requirements, and end-to-end release acceptance checks.
 - [ ] **Update program status in `OPENRECALL-DESKTOP-01.md`:** After the phase files are completed, update the deliverable map statuses, summarize major approved decisions, and record any remaining open questions.
 
 ## Completion Rule
